@@ -1,0 +1,16 @@
+{
+	"preprocessing": true,
+	"algorithm": "CloFast",
+	"minSupport": 0.1,
+	"minCoverage": 0.05,
+	"segmented": false,
+	"metric": "cohesion",
+    "context": [
+        "source",
+		"Sheet",
+		"FileName",
+		"Url",
+		"Label",
+		"Row/Column"
+    ]
+}

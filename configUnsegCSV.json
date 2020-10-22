@@ -1,0 +1,14 @@
+{
+	"preprocessing": true,
+	"algorithm": "CloFast",
+	"minSupport": 0.1,
+	"minCoverage": 0.05,
+	"segmented": false,
+	"metric": "cohesion",
+    "context": [
+		"target.id",
+		"target.name",
+		"target.innerText",
+		"target.sheetName"
+    ]
+}
