@@ -69,8 +69,6 @@ public class Main {
         caseService.extractCases(events, segmented, contextAttributes);
         HashMap<Integer, List<Event>> cases = new HashMap<>(caseService.getCases());
 
-        //Parser.saveIntoMXML(log, cases);
-
         long t1 = System.currentTimeMillis();
 
         PatternsMiner patternsMiner = new PatternsMiner(caseService);
@@ -81,8 +79,6 @@ public class Main {
         TaneService taneService = new TaneService(caseService);
         ItemsDependencyService itemsDependencyService = new ItemsDependencyService(taneService);
 
-        //patterns.add(patterns.get(0));
-
         if (patterns != null) {
             patterns.forEach(pattern -> pattern.setTransformations(foofahService.findTransformations(pattern)));
             patterns.forEach(pattern -> pattern.setItemsDependencies(itemsDependencyService.findDependencies(pattern)));
@@ -92,7 +88,6 @@ public class Main {
         }
 
         //patterns = patterns.stream().filter(pattern -> pattern.isAutomatable()).collect(Collectors.toList());
-
         //long t2 = System.currentTimeMillis();
         //System.out.println("Execution time - " + (t2 - t1) / 1000.0 + " sec");
 
